@@ -1,0 +1,1083 @@
+<!doctype html>
+<html lang="pt-br" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TelaInicio_V1</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/examples/sidebars/" rel="canonical">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> 1 FODE FORMATAÇÃO-->
+  <link href="https://getbootstrap.com/docs/5.3/examples/carousel/" rel="canonical">
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/dist/css/carrousel/carousel.css" rel="stylesheet">
+  <link href="../assets/dist/css/tela_inicio/tela_inicio.css" rel="stylesheet">
+    
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/color-modes.js"></script>
+  <script src="../assets/dist/js/tela_inicio/incio.js"></script>
+</head>
+
+<body>
+  <!-- Botão modo noturno/modo claro -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path
+        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+    </symbol>
+
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+    </symbol>
+
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path
+        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+    </symbol>
+
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path
+        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+    </symbol>
+  </svg>
+
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle card-button">
+    <button class="btn btn-bd py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+        <use href="#circle-half"></use>
+      </svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center drop_item drop_L"
+          data-bs-theme-value="light" aria-pressed="false">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+            <use href="#sun-fill"></use>
+          </svg>
+          Claro
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center drop_item drop_D"
+          data-bs-theme-value="dark" aria-pressed="false">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+            <use href="#moon-stars-fill"></use>
+          </svg>
+          Escuro
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active drop_item drop_A"
+          data-bs-theme-value="auto" aria-pressed="true">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+            <use href="#circle-half"></use>
+          </svg>
+          Resetar
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+  
+<!-- Texto principal/inicial -->
+  <div class="MainContainer">
+    <div class="ParallaxContainer">
+  <div class="titulo" data-bs-theme="dark">
+    <h1 class="Titulo" style="text-align: center;">LearnSecure</h1>
+  </div>
+  </div>
+
+
+  <main class="card-main border">
+
+    <!-- Movimentar o carrousel -->
+    <div id="myCarousel" class="carousel slide border border-black border-2 " data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="indicadores active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <!-- Texto/conteúdo do carrousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../img/noticia_1.png" class="d-block w-100" alt="">
+          <svg class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1 style="text-shadow: 2px 2px 4px  rgba(0, 0, 0); color: rgb(255, 255, 255);">Cuidado com seus dados
+                pessoais!</h1>
+              <p style="text-shadow: 2px 2px 4px  rgba(0, 0, 0);">No Brasil, funcionários têm acesso fácil a dados
+                pessoais de clientes</p>
+              <p><a class="btn btn-lg btn_Car"
+                  href="https://www.convergenciadigital.com.br/Seguranca/No-Brasil%2C-funcionarios-tem-acesso-facil-a-dados-pessoais-de-clientes-63128.html"
+                  target="_blank">Leia mais aqui</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="../img/noticia_2.png" class="d-block w-100" alt="">
+          <svg vg class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+          </svg>
+          <div class="container">
+            <div class="carousel-caption" style="text-align: left; padding: 10px; color: rgb(255, 255, 255)">
+              <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0);">Preste atenção onde você armazena os seus dados!</h1>
+              <p style="text-shadow: 2px 2px 4px rgba(0, 0, 0);">Quase metade dos dados vazados no mundo está no Brasil
+              </p>
+              <p><a class="btn btn-lg btn_Car"
+                  href="https://www.convergenciadigital.com.br/Seguranca/Quase-metade-dos-dados-vazados-no-mundo-esta-no-Brasil-62770.html"
+                  target="_blank">Veja mais</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="../img/noticia_3.png" class="d-block w-100" alt="">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1 style="text-shadow: 2px 2px 4px  rgba(0, 0, 0);">Ficou sabendo?</h1>
+              <p style="text-shadow: 2px 2px 4px  rgba(0, 0, 0);">OAB é alvo de ataque hacker e paralisa sistemas</p>
+              <p><a class="btn btn-lg btn_Car"
+                  href="https://www.convergenciadigital.com.br/Seguranca/OAB-e-alvo-de-ataque-hacker-e-paralisa-sistemas-62849.html"
+                  target="_blank">Veja mais</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Área de informações -->
+    <div class="container marketing">
+
+      <div class="row">
+
+        <div class="col-lg-4 border border-dark-subtle border-1">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="white" />
+            <image href="../img/example.png" x="20" y="25" width="100" height="100" />
+          </svg>
+          <h2 class="fw-normal">Proposta</h2>
+          <p>This example shows how responsive offcanvas menus work within the navbar. For positioning of navbars,
+            checkout the top and fixed top examples.</p>
+          <p><a class="btn btn-secondary" href="#">Detalhes &raquo;</a></p>
+        </div>
+
+        <div class="col-lg-4 ">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="white" />
+            <image href="../img/example.png" x="20" y="25" width="100" height="100" />
+          </svg>
+          <h2 class="fw-normal">Proposta</h2>
+          <p>This example shows how responsive offcanvas menus work within the navbar. For positioning of navbars,
+            checkout the top and fixed top examples.</p>
+          <p><a class="btn btn-secondary" href="#">Detalhes &raquo;</a></p>
+        </div>
+
+        <div class="col-lg-4 border border-dark-subtle">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="white" />
+            <image href="../img/example.png" x="20" y="25" width="100" height="100" />
+          </svg>
+          <h2 class="fw-normal">Proposta</h2>
+          <p>This example shows how responsive offcanvas menus work within the navbar. For positioning of navbars,
+            checkout the top and fixed top examples.</p>
+          <p><a class="btn btn-secondary" href="#">Detalhes &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- Módulos -->
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Modulo 1 <span class="text-body-secondary">Introdução ao
+              conhecimento</span></h2>
+          <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose
+            here.</p>
+          <p><a class="btn btn-secondary" href="index-conteudo.html">Acessar Conteúdo &raquo;</a></p>
+        </div>
+
+        <div class="col-md-5">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" />
+            <image href="../img/example.png" x="60" y="60" width="80%" height="80%" />
+          </svg>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Modulo 2 <span class="text-body-secondary">Se desenvolvendo na
+              segurança</span></h2>
+          <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this
+            layout would work with some actual real-world content in place.</p>
+          <div class="locked-button">
+            <span></span>
+            <a class="btn btn-secondary" disabled>Bloqueado &otimes;</a>
+          </div>
+        </div>
+
+        <div class="col-md-5 order-md-1">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
+              fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+          </svg>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Modulo 3 <span class="text-body-secondary">Checkmate </span>
+          </h2>
+          <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really
+            intended to be actually read, simply here to give you a better view of what this would look like with some
+            actual content. Your content.</p>
+          <div class="locked-button">
+            <span></span>
+            <a class="btn btn-secondary" disabled>Bloqueado &otimes;</a>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
+              fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+          </svg>
+        </div>
+      </div>
+
+      
+
+      <!--Redirecionamento para o quiz
+       <hr class="featurette-divider">
+      <div class="my-3 p-3 bg-body rounded shadow-sm">
+        <h2 class="border-bottom pb-2 mb-0">QUIZ</h2>
+        <div class="d-flex text-body-secondary pt-3">
+          <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff"
+              dy=".3em">32x32</text>
+          </svg>
+          <p class="pb-3 mb-0 small lh-sm border-bottom">
+            <strong class="d-block text-gray-dark">Avaliação Módulo 1</strong>
+            Avaliação Módulo 1
+          </p>
+
+          <div class="ms-auto">
+            <a class="btn btn-secondary" href="Quiz.html">Acessar Quiz &raquo;</a>
+          </div>
+        </div>
+
+        <div class="d-flex text-body-secondary pt-3">
+          <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#e83e8c"></rect><text x="50%" y="50%" fill="#e83e8c"
+              dy=".3em">32x32</text>
+          </svg>
+          <p class="pb-3 mb-0 small lh-sm border-bottom">
+            <strong class="d-block text-gray-dark">Avaliação Módulo 2</strong>
+            Avaliação Módulo 2
+          </p>
+
+          <div class="ms-auto">
+            <a class="btn btn-secondary" disabled>Acessar Quiz &raquo;</a>
+          </div>
+        </div>
+
+        <div class="d-flex text-body-secondary pt-3">
+          <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#6f42c1"></rect><text x="50%" y="50%" fill="#6f42c1"
+              dy=".3em">32x32</text>
+          </svg>
+          <p class="pb-3 mb-0 small lh-sm border-bottom">
+            <strong class="d-block text-gray-dark">Avaliação Módulo 3</strong>
+            Avaliação Módulo 3
+          </p>
+
+          <div class="ms-auto">
+            <a class="btn btn-secondary" disabled>Acessar Quiz &raquo;</a>
+          </div>
+        </div> 
+      </div>-->
+
+      <hr class="featurette-divider">
+
+      <!-- Quem Somos/Sobre Nos -->
+      <h1 class="text-center">Sobre Nós</h1>
+      <br>
+      <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                  preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">Thumbnail</text>
+                </svg>
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                  preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">Thumbnail</text>
+                </svg>
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                  preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">Thumbnail</text>
+                </svg>
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+      <!-- Text 
+      <div class="text-center p-3 mb-2 bg-info-subtle text-emphasis-info">
+        <h1>Somos um parceiro confiável para empresas em todo o mundo e oferecemos aos nossos
+          clientes a confiança necessária para atingir todo o seu potencial.(EXEMPLO)</h1>
+      </div>-->
+
+      <div class="pt-4 pt-md-5 pt-lg-6 pb-5 pb-md-6 pb-lg-7 PageSection PageSection--container--on">
+        <div class="PageSection__outer">
+          <div class="PageSection__wrap container">
+            <div class="PageSection__inner">
+              <div class="PageSection__content">
+                <div
+                  class="Columns Columns--align-inner--center Columns--align-items--space-around Columns--gutters--normal Columns--items-style--plain">
+                  <div class="Columns__wrap">
+                    <div class="row Columns__row justify-content-around align-items-center">
+                      <div class="col-lg-6 col-md-6 col-sm-12 ColumnItem ColumnItem--background-texture-color--default">
+                        <div class="ColumnItem__item-wrapper ">
+                          <div class="ColumnItem__inner">
+                            <div class="BasicContent BasicContent--image-position--top BasicContent--image-type--icon"
+                              data-component-type="content">
+                              <div class="BasicContent__wrap">
+                                <div class="BasicContent__inner">
+                                  <div class="BasicContent__text">
+                                    <div class="BasicContent__header text-align-left">
+                                      <h2>
+                                        <font style="vertical-align: inherit;">
+                                          <font style="vertical-align: inherit;">
+                                            Apoiando uns aos outros e nossa comunidade
+                                          </font>
+                                        </font>
+                                      </h2>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="col-lg-5 col-md-5 col-sm-12 ColumnItem ColumnItem--bg-pattern-position--left ColumnItem--background-texture-color--default ColumnItem--background-texture-type--dots-odd odd">
+                        <div class="ColumnItem__item-wrapper ">
+                          <div class="ColumnItem__inner">
+                            <div
+                              class="Columns Columns--align-inner--stretch Columns--align-items--left Columns--gutters--normal Columns--items-style--plain">
+                              <div class="Columns__wrap">
+                                <div class="row Columns__row justify-content-start align-items-stretch">
+                                  <div
+                                    class="col-sm-12 ColumnItem hoverEnabled ColumnItem--bg-pattern-position--left ColumnItem--background-texture-color--default ColumnItem--background-texture-type--dots-even even">
+                                    <div class="ColumnItem__item-wrapper ">
+                                      <div class="ColumnItem__inner">
+                                        <div
+                                          class="BasicContent BasicContent--image-position--top BasicContent--image-type--icon"
+                                          data-component-type="content">
+                                          <div class="BasicContent__wrap">
+                                            <div class="BasicContent__inner">
+                                              <div class="BasicContent__text">
+                                                <div class="BasicContent__header text-align-left">
+                                                  <h5>
+                                                    <font style="vertical-align: inherit;">
+                                                      <font style="vertical-align: inherit;">
+                                                        Diversidade, inclusão e pertencimento
+                                                      </font>
+                                                    </font>
+                                                  </h5>
+                                                </div>
+                                                <div class="BasicContent__body">
+                                                  <p>
+                                                    <font style="vertical-align: inherit;">
+                                                      <font style="vertical-align: inherit;">Nós nos preocupamos com a
+                                                        comunidade, dentro e fora de nossa empresa. </font>
+                                                      <font style="vertical-align: inherit;">Com grupos de recursos para
+                                                        funcionários como Pride at Okta, Women at Okta e People of Color
+                                                        at Okta, estamos investindo no mundo ao nosso redor.</font>
+                                                    </font>
+                                                  </p>
+                                                </div>
+                                                <div class="BasicContent__cta">
+                                                  <div class="Cta Cta--default">
+                                                    <a class="Cta__link" data-cta-element="1" href="/diversity/">
+                                                      <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">
+                                                          Encontre o seu lugar
+                                                        </font>
+                                                      </font>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="col-sm-12 ColumnItem hoverEnabled ColumnItem--bg-pattern-position--left ColumnItem--background-texture-color--default ColumnItem--background-texture-type--dots-even even">
+                                    <div class="ColumnItem__item-wrapper ">
+                                      <div class="ColumnItem__inner">
+                                        <div
+                                          class="BasicContent BasicContent--image-position--top BasicContent--image-type--icon"
+                                          data-component-type="content">
+                                          <div class="BasicContent__wrap">
+                                            <div class="BasicContent__inner">
+                                              <div class="BasicContent__text">
+                                                <div class="BasicContent__header text-align-left">
+                                                  <h5>
+                                                    <font style="vertical-align: inherit;">
+                                                      <font style="vertical-align: inherit;">
+                                                        Impacto social
+                                                      </font>
+                                                    </font>
+                                                  </h5>
+                                                </div>
+                                                <div class="BasicContent__body">
+                                                  <p>
+                                                    <font style="vertical-align: inherit;">
+                                                      <font style="vertical-align: inherit;">A missão da Okta for Good é
+                                                        fortalecer as conexões entre pessoas, tecnologia e comunidade.
+                                                      </font>
+                                                      <font style="vertical-align: inherit;">Assumimos o compromisso de
+                                                        1% e dedicamos nosso tempo, produto e patrimônio para retribuir.
+                                                      </font>
+                                                    </font>
+                                                  </p>
+                                                </div>
+                                                <div class="BasicContent__cta">
+                                                  <div class="Cta Cta--default">
+                                                    <a class="Cta__link" data-cta-element="1" href="/okta-for-good/">
+                                                      <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">
+                                                          Saiba como retribuímos
+                                                        </font>
+                                                      </font>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="col-sm-12 ColumnItem hoverEnabled ColumnItem--bg-pattern-position--left ColumnItem--background-texture-color--default ColumnItem--background-texture-type--dots-odd odd">
+                                    <div class="ColumnItem__item-wrapper ">
+                                      <div class="ColumnItem__inner">
+                                        <div
+                                          class="BasicContent BasicContent--image-position--top BasicContent--image-type--icon"
+                                          data-component-type="content">
+                                          <div class="BasicContent__wrap">
+                                            <div class="BasicContent__inner">
+                                              <div class="BasicContent__text">
+                                                <div class="BasicContent__header text-align-left">
+                                                  <h5>
+                                                    <font style="vertical-align: inherit;">
+                                                      <font style="vertical-align: inherit;">
+                                                        eu sou Okta
+                                                      </font>
+                                                    </font>
+                                                  </h5>
+                                                </div>
+                                                <div class="BasicContent__body">
+                                                  <p>
+                                                    <font style="vertical-align: inherit;">
+                                                      <font style="vertical-align: inherit;">Nosso pessoal torna nossa
+                                                        empresa única. </font>
+                                                      <font style="vertical-align: inherit;">Conheça as histórias
+                                                        pessoais e profissionais de alguns de nossos funcionários mais
+                                                        inspiradores: nossos solucionadores de problemas, nossos
+                                                        artistas, nossos construtores.</font>
+                                                    </font>
+                                                  </p>
+                                                </div>
+                                                <div class="BasicContent__cta">
+                                                  <div class="Cta Cta--default">
+                                                    <a class="Cta__link" data-cta-element="1" href="/i-am-okta/">
+                                                      <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">
+                                                          Conheça o time
+                                                        </font>
+                                                      </font>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- Ajustar alinhamento (preto(hugo)) -->
+      <div class="album py-5 bg-body-tertiary">
+        <div class="row">
+          <div class="col-sm-4 mb-4 mb-sm-0">
+            <div class="card" style="width: 18rem;">
+              <img src="../img/example.png" class="card-img-top" alt="example" width="" height="">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 mb-4 mb-sm-0">
+            <div class="card" style="width: 18rem;">
+              <img src="../img/example.png" class="card-img-top" alt="example" width="" height="">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 mb-4 mb-sm-0">
+            <div class="card" style="width: 18rem;">
+              <img src="../img/example.png" class="card-img-top" alt="example" width="" height="">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- Nossa Visao -->
+      <div class="pt-5 pt-md-6 pt-lg-7 pb-5 pb-md-6 pb-lg-7 u-bgColor--f5f5f6 PageSection PageSection--container--on">
+        <div class="PageSection__outer">
+          <div class="PageSection__wrap container">
+            <div class="PageSection__inner">
+              <div class="PageSection__content">
+                <div
+                  class="Columns Columns--align-inner--center Columns--align-items--space-around Columns--gutters--normal Columns--items-style--plain">
+                  <div class="Columns__wrap">
+                    <div class="row Columns__row justify-content-around align-items-center">
+                      <div
+                        class="col-lg-6 col-md-6 col-sm-12 ColumnItem ColumnItem--bg-pattern-position--left ColumnItem--background-texture-color--default ColumnItem--background-texture-type--dots-odd odd">
+                        <div class="ColumnItem__item-wrapper ">
+                          <div class="ColumnItem__inner">
+                            <div class="Vidyard">
+                              <div class="Vidyard__embed">
+                                <div class="vidyard-player-container" uuid="x4xEmTDHtRZnbzE7GjYVMd"
+                                  style="margin: auto; width: 100%; height: auto; overflow: hidden; display: block;">
+                                  <div class="vidyard-div-x4xEmTDHtRZnbzE7GjYVMd" role="region"
+                                    aria-label="Reprodutor de mídia Vidyard"
+                                    style="position: relative; padding-bottom: 56.25%; height: 0px; overflow: hidden; max-width: 100%; background-color: transparent;">
+                                    <div class="vidyard-inner-container-x4xEmTDHtRZnbzE7GjYVMd"
+                                      style="position: absolute;height: 100%; width: 100%; " data-pl="false"> <iframe
+                                        allow="autoplay; fullscreen; picture-in-picture; camera; microphone; display-capture"
+                                        allowfullscreen="" allowtransparency="true"
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                        class="vidyard-iframe-x4xEmTDHtRZnbzE7GjYVMd" frameborder="0" height="100%"
+                                        width="100%" scrolling="no"
+                                        src="https://play.vidyard.com/x4xEmTDHtRZnbzE7GjYVMd?disable_popouts=1&amp;v=4.3.12&amp;type=inline&amp;cc=en"
+                                        title="De nossos executivos: a visão da Okta"
+                                        style="opacity: 1; background-color: transparent; position: absolute; top: 0px; left: 0px;"></iframe><img
+                                        class="vidyard-player-embed inserted"
+                                        src="https://play.vidyard.com/x4xEmTDHtRZnbzE7GjYVMd.jpg"
+                                        data-uuid="x4xEmTDHtRZnbzE7GjYVMd" data-v="4" data-type="inline" data-cc="en"
+                                        preload="none" data-rendered="true" style="display: none;"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12 ColumnItem ColumnItem--background-texture-color--default">
+                        <div class="ColumnItem__item-wrapper ">
+                          <div class="ColumnItem__inner">
+                            <div class="BasicContent BasicContent--image-position--top BasicContent--image-type--icon"
+                              data-component-type="content">
+                              <div class="BasicContent__wrap">
+                                <div class="BasicContent__inner">
+                                  <div class="BasicContent__text">
+                                    <div class="BasicContent__header text-align-left text-center">
+                                      <h2>
+                                        <font style="vertical-align: inherit;">
+                                          <font style="vertical-align: inherit;">
+                                            Nossa visão
+                                          </font>
+                                        </font>
+                                      </h2>
+                                    </div>
+                                    <div class="BasicContent__body text-center">
+                                      <h4>
+                                        <font style="vertical-align: inherit;">
+                                          <font style="vertical-align: inherit;">Acelere um mundo onde todos possam usar
+                                            qualquer tecnologia com segurança. </font>
+                                          <font style="vertical-align: inherit;">Oferecemos acesso simples e seguro a
+                                            pessoas e organizações em todos os lugares.</font>
+                                        </font>
+                                      </h4>
+                                      <h4>
+                                        <font style="vertical-align: inherit;">
+                                          <font style="vertical-align: inherit;">Prometemos não apenas proteger as
+                                            identidades da força de trabalho e dos usuários de nossos clientes, mas
+                                            também perguntar: "o que mais podemos tornar possível?"</font>
+                                        </font>
+                                      </h4>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- Nossos Valores -->
+      <div class="col-lg-12  col-md-12 col-sm-12 ColumnItem ColumnItem--background-texture-color--default">
+        <div class="ColumnItem__item-wrapper ">
+          <div class="ColumnItem__inner">
+            <div
+              class="Columns Columns--align-inner--stretch Columns--align-items--left Columns--gutters--normal Columns--items-style--plain">
+              <div class="Columns__wrap">
+                <div class="row Columns__row justify-content-start align-items-stretch">
+                  <div
+                    class="col-lg-4 col-md-6 col-sm-12 ColumnItem ColumnItem--align-self--center ColumnItem--bg-pattern-position--left ColumnItem--background-texture-color--default ColumnItem--background-texture-type--dots-even even">
+                    <div class="ColumnItem__item-wrapper ">
+                      <div class="ColumnItem__inner">
+                        <div class="BasicContent BasicContent--image-position--top BasicContent--image-type--icon"
+                          data-component-type="content">
+                          <div class="BasicContent__wrap">
+                            <div class="BasicContent__inner">
+                              <div class="BasicContent__text">
+                                <div class="BasicContent__header text-align-left">
+                                  <h2>
+                                    <font style="vertical-align: inherit;">
+                                      <font style="vertical-align: inherit;">
+                                        Nossos valores
+                                      </font>
+                                    </font>
+                                  </h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 ColumnItem ColumnItem--background-texture-color--default">
+                    <div class="ColumnItem__item-wrapper ">
+                      <div class="ColumnItem__inner">
+                        <div class="BasicContent BasicContent--image-position--top BasicContent--image-type--icon"
+                          data-component-type="content">
+                          <div class="BasicContent__wrap">
+                            <div class="BasicContent__inner">
+                              <div class="BasicContent__image">
+                                <div class="svg-container" about="/taxonomy/term/3760">
+                                  <svg enable-background="new 0 0 76 50" width="76" height="50" viewBox="0 0 76 50"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="m58 20c-4.1 0-7.5-3.4-7.5-7.5v-5c0-4.1 3.4-7.5 7.5-7.5s7.5 3.4 7.5 7.5v5c0 4.1-3.4 7.5-7.5 7.5zm0-17.5c-2.8 0-5 2.2-5 5v5c0 2.8 2.2 5 5 5s5-2.2 5-5v-5c0-2.8-2.2-5-5-5z"
+                                      fill="#7d91cb"></path>
+                                    <path
+                                      d="m18 20c-4.1 0-7.5-3.4-7.5-7.5v-5c0-4.1 3.4-7.5 7.5-7.5s7.5 3.4 7.5 7.5v5c0 4.1-3.4 7.5-7.5 7.5zm0-17.5c-2.8 0-5 2.2-5 5v5c0 2.8 2.2 5 5 5s5-2.2 5-5v-5c0-2.8-2.2-5-5-5z"
+                                      fill="#7d91cb"></path>
+                                    <path
+                                      d="m38 25c-5.5 0-10-4.5-10-10v-5c0-5.5 4.5-10 10-10s10 4.5 10 10v5c0 5.5-4.5 10-10 10zm0-22.5c-4.1 0-7.5 3.4-7.5 7.5v5c0 4.1 3.4 7.5 7.5 7.5s7.5-3.4 7.5-7.5v-5c0-4.1-3.4-7.5-7.5-7.5z"
+                                      fill="#002979"></path>
+                                    <path
+                                      d="m58.3 50h-40.7l4.4-17.6c1.1-4.4 5.1-7.4 9.6-7.4h12.7c4.5 0 8.5 3 9.6 7.4zm-37.5-2.5h34.3l-3.6-14.5c-.9-3.3-3.8-5.5-7.2-5.5h-12.6c-3.4 0-6.3 2.2-7.2 5.5z"
+                                      fill="#002979"></path>
+                                    <g fill="#7d91cb">
+                                      <path
+                                        d="m18.2 37.5h-14.7l3.4-10.7c.8-2.6 3.3-4.4 6-4.3h10.1c1.3 0 2.5.4 3.5 1.1.9-.4 1.8-.7 2.8-.9-1.6-1.7-3.9-2.7-6.3-2.7h-10.2c-3.8 0-7.2 2.5-8.3 6.1l-4.5 13.9h17.6z">
+                                      </path>
+                                      <path
+                                        d="m49.3 23.6c1-.7 2.2-1.1 3.5-1.1h10.2c2.7 0 5.1 1.7 6 4.3l3.5 10.7h-14.7l.6 2.5h17.6l-4.7-14c-1.2-3.6-4.5-6-8.3-6h-10.2c-2.4 0-4.7 1-6.3 2.7 1 .2 1.9.5 2.8.9z">
+                                      </path>
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="BasicContent__text">
+                                <div class="BasicContent__header text-align-left">
+                                  <h5>
+                                    <font style="vertical-align: inherit;">
+                                      <font style="vertical-align: inherit;">
+                                        Capacite nosso pessoal
+                                      </font>
+                                    </font>
+                                  </h5>
+                                </div>
+                                <div class="BasicContent__body">
+                                  <p>
+                                    <font style="vertical-align: inherit;">
+                                      <font style="vertical-align: inherit;">Somos uma comunidade diversificada e
+                                        apaixonada de pessoas que se preocupam profundamente com nossos produtos, marca
+                                        e cultura.&nbsp;</font>
+                                    </font>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 ColumnItem ColumnItem--background-texture-color--default">
+                    <div class="ColumnItem__item-wrapper ">
+                      <div class="ColumnItem__inner">
+                        <div class="BasicContent BasicContent--image-position--top BasicContent--image-type--icon"
+                          data-component-type="content">
+                          <div class="BasicContent__wrap">
+                            <div class="BasicContent__inner">
+                              <div class="BasicContent__image">
+                                <div class="svg-container" about="/taxonomy/term/3761">
+                                  <svg enable-background="new 0 0 70 45" width="70" height="45" viewBox="0 0 70 45"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m59.8 26.2h5.2v2.5h-5.2z" fill="#7d91cb"></path>
+                                    <path
+                                      d="m37.2 45c-1 0-2-.2-2.9-.6l-12.3-5.6c-1.8-.8-3.4-2-4.7-3.4l-6.3-6.4c-.2-.2-.4-.3-.6-.3h-10.4v-20h9.4c1 0 2.1-.3 3-.8l11.8-6.4c3.9-1.9 8.4-2.1 12.4-.6l-.8 2.3c-3.4-1.2-7.2-1-10.5.6l-11.8 6.3c-1.3.7-2.7 1-4.1 1h-6.9v15h7.9c.9 0 1.8.4 2.4 1l6.4 6.4c1.1 1.2 2.4 2.2 3.9 2.9l12.2 5.6c1.4.6 3.1.5 4.4-.4l13.1-9.3c1.1-.7 1.7-2 1.7-3.3s-.7-2.5-1.8-3.2l-16.2-10 3.1-1 14.4 9c3 1.9 3.9 5.8 2.1 8.8-.4.7-1 1.3-1.7 1.8l-13.1 9.3c-1.2.9-2.6 1.3-4.1 1.3z"
+                                      fill="#002979"></path>
+                                    <path
+                                      d="m70 28.7h-6.9v-2.5h4.4v-15h-4.5c-1.4 0-2.7-.3-3.9-.9l-12.9-6.5c-3.4-1.6-7.3-1.8-10.8-.4l-12.4 7.7c-.8.5-1.1 1.6-.7 2.5.4.8 1.3 1.1 2.2.9l13.1-4.5.8 2.4-13.1 4.5c-2 .7-4.2-.2-5.2-2-1.1-2.1-.5-4.6 1.5-5.9l12.6-7.8c4.2-1.7 8.9-1.5 13 .4l12.9 6.5c1 .4 1.9.6 2.9.6h7z"
+                                      fill="#7d91cb"></path>
+                                    <g fill="#002979">
+                                      <path d="m44.7 18.4h2.5v19.3h-2.5z"
+                                        transform="matrix(.495 -.8689 .8689 .495 -1.1717 54.0417)"></path>
+                                      <path d="m41.1 25.7h2.5v15h-2.5z"
+                                        transform="matrix(.4811 -.8766 .8766 .4811 -7.1847 54.336)"></path>
+                                      <path d="m37.4 33.2h2.5v10.3h-2.5z"
+                                        transform="matrix(.4515 -.8923 .8923 .4515 -13.0868 55.5311)"></path>
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="BasicContent__text">
+                                <div class="BasicContent__header text-align-left">
+                                  <h5>
+                                    <font style="vertical-align: inherit;">
+                                      <font style="vertical-align: inherit;">
+                                        Aja com integridade
+                                      </font>
+                                    </font>
+                                  </h5>
+                                </div>
+                                <div class="BasicContent__body">
+                                  <p>
+                                    <font style="vertical-align: inherit;">
+                                      <font style="vertical-align: inherit;">Sempre tratamos uns aos outros, nossos
+                                        clientes, nossos parceiros e nossa comunidade estendida com honestidade.</font>
+                                    </font>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 ColumnItem ColumnItem--background-texture-color--default">
+                    <div class="ColumnItem__item-wrapper ">
+                      <div class="ColumnItem__inner">
+                        <div class="BasicContent BasicContent--image-position--top BasicContent--image-type--icon"
+                          data-component-type="content">
+                          <div class="BasicContent__wrap">
+                            <div class="BasicContent__inner">
+                              <div class="BasicContent__image">
+                                <div class="svg-container" about="/taxonomy/term/3719">
+                                  <svg enable-background="new 0 0 52.5 74.6" width="52.5" height="74.6"
+                                    viewBox="0 0 52.5 74.6" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="m26.2 52.5c-14.4 0-26.2-11.8-26.2-26.3s11.8-26.2 26.2-26.2 26.2 11.8 26.2 26.2c.1 14.5-11.7 26.3-26.2 26.3zm0-50c-13.1 0-23.7 10.6-23.7 23.7s10.6 23.8 23.7 23.8 23.8-10.6 23.8-23.8c0-13.1-10.6-23.7-23.8-23.7z"
+                                      fill="#002979"></path>
+                                    <path
+                                      d="m12.5 74.5v-23l2.5 1.2v17.8l8.5-4.2c1.8-.9 3.8-.9 5.6 0l8.5 4.2v-17.7l2.5-1.2v23l-12.1-6c-1.1-.5-2.3-.5-3.3 0z"
+                                      fill="#002979"></path>
+                                    <path
+                                      d="m24.6 35.4c-.3 0-.6-.1-.9-.3l-10.8-10.4 1.7-1.8 9.9 9.4 15.8-16.9 1.8 1.7-16.6 17.8c-.2.3-.6.4-.9.5z"
+                                      fill="#7d91cb"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="BasicContent__text">
+                                <div class="BasicContent__header text-align-left">
+                                  <h5>
+                                    <font style="vertical-align: inherit;">
+                                      <font style="vertical-align: inherit;">
+                                        Nunca pare de inovar
+                                      </font>
+                                    </font>
+                                  </h5>
+                                </div>
+                                <div class="BasicContent__body">
+                                  <p>
+                                    <font style="vertical-align: inherit;">
+                                      <font style="vertical-align: inherit;">Somos uma empresa de construtores, e somos
+                                        movidos a enfrentar os problemas difíceis e resolvê-los.</font>
+                                    </font>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 ColumnItem ColumnItem--background-texture-color--default">
+                    <div class="ColumnItem__item-wrapper ">
+                      <div class="ColumnItem__inner">
+                        <div class="BasicContent BasicContent--image-position--top BasicContent--image-type--icon"
+                          data-component-type="content">
+                          <div class="BasicContent__wrap">
+                            <div class="BasicContent__inner">
+                              <div class="BasicContent__image">
+                                <div class="svg-container" about="/taxonomy/term/3782">
+                                  <svg enable-background="new 0 0 70 69.3" width="70" height="69.3"
+                                    viewBox="0 0 70 69.3" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="m17.5 30h-6.8l-8.2 8.2v-32c0-2.1 1.7-3.8 3.8-3.8h32.5c2.1 0 3.8 1.7 3.8 3.8v8.8h2.4v-8.8c0-3.4-2.8-6.2-6.2-6.2h-32.6c-3.4 0-6.2 2.8-6.2 6.2v38l11.8-11.8h5.7z"
+                                      fill="#002979"></path>
+                                    <path
+                                      d="m70 69.3-14.3-14.3h-29.5c-3.4 0-6.2-2.8-6.2-6.2v-25c0-3.5 2.8-6.2 6.2-6.2h37.5c3.5 0 6.2 2.8 6.2 6.2v45.5zm-43.8-49.3c-2.1 0-3.8 1.7-3.8 3.7v25c0 2.1 1.7 3.8 3.8 3.8h30.5l10.7 10.7v-39.4c0-2.1-1.7-3.8-3.8-3.8z"
+                                      fill="#7d91cb"></path>
+                                    <g fill="#002979">
+                                      <path d="m30 30h30v2.5h-30z"></path>
+                                      <path d="m30 40h30v2.5h-30z"></path>
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="BasicContent__text">
+                                <div class="BasicContent__header text-align-left">
+                                  <h5>
+                                    <font style="vertical-align: inherit;">
+                                      <font style="vertical-align: inherit;">
+                                        Seja transparente
+                                      </font>
+                                    </font>
+                                  </h5>
+                                </div>
+                                <div class="BasicContent__body">
+                                  <p>
+                                    <font style="vertical-align: inherit;">
+                                      <font style="vertical-align: inherit;">Sabemos que manter um fluxo aberto de
+                                        informações entre equipes, entre indivíduos, para cima e para baixo e ao redor
+                                        da empresa é crucial para a forma como trabalhamos.</font>
+                                    </font>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 ColumnItem ColumnItem--background-texture-color--default">
+                    <div class="ColumnItem__item-wrapper ">
+                      <div class="ColumnItem__inner">
+                        <div class="BasicContent BasicContent--image-position--top BasicContent--image-type--icon"
+                          data-component-type="content">
+                          <div class="BasicContent__wrap">
+                            <div class="BasicContent__inner">
+                              <div class="BasicContent__image">
+                                <div class="svg-container" about="/taxonomy/term/3763">
+                                  <svg enable-background="new 0 0 73.5 65.6" width="73.5" height="65.6"
+                                    viewBox="0 0 73.5 65.6" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="m60 9.9c-2.1-1.5-4.6-2.4-7.2-2.4-3.2 0-6.3 1.3-8.5 3.5l-7.5 7.5-7.5-7.5c-2.3-2.3-5.3-3.6-8.5-3.6-2.6 0-5.1.8-7.2 2.4-3.5 2.5-6 6.4-6 10.8 0 3.2 1.3 6.3 3.5 8.5l25.7 25.9 25.8-25.8c2.3-2.3 3.5-5.3 3.5-8.5-.1-4.4-2.6-8.3-6.1-10.8zm.8 17.6-24 24-24-24c-1.8-1.8-2.8-4.2-2.8-6.8 0-1.4.3-2.8.9-4.1 1.8-3.6 5.6-6.6 9.8-6.6 2.5 0 5 1 6.8 2.8l9.3 9.3 9.3-9.3c1.8-1.8 4.2-2.8 6.8-2.8 4.2 0 8 3 9.8 6.6.6 1.3.9 2.7.9 4.1 0 2.5-1 5-2.8 6.8z"
+                                      fill="#7d91cb"></path>
+                                    <path
+                                      d="m73.2 17.3c-1.4-6.7-5.8-12.3-11.9-15.3-7.5-3.7-16.4-2.1-22.3 3.7l-2.2 2.3-2.2-2.2c-5.9-5.9-14.8-7.4-22.3-3.8-6.1 3-10.5 8.6-11.9 15.3-1.1 6.3 1 12.7 5.5 17.2 0 0 31 31.1 31 31.1l31.1-31.1c4.3-4.5 6.3-11 5.2-17.2zm-7.2 15.5-29.2 29.2-29.3-29.2c-3.2-3.2-5-7.5-5-12.1 0-3.2.9-6.3 2.6-9 3.4-5.3 9.2-9.2 15.6-9.2 4.5 0 8.9 1.8 12.1 5l4 4 4-4c3.2-3.2 7.5-5 12.1-5 6.4 0 12.2 3.9 15.6 9.1 1.7 2.7 2.6 5.8 2.6 9 0 4.6-1.8 9-5.1 12.2z"
+                                      fill="#002979"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="BasicContent__text">
+                                <div class="BasicContent__header text-align-left">
+                                  <h5>
+                                    <font style="vertical-align: inherit;">
+                                      <font style="vertical-align: inherit;">
+                                        Ame nossos clientes
+                                      </font>
+                                    </font>
+                                  </h5>
+                                </div>
+                                <div class="BasicContent__body">
+                                  <p>
+                                    <font style="vertical-align: inherit;">
+                                      <font style="vertical-align: inherit;">Nossos clientes são nossa prioridade número
+                                        um e sabemos que, se eles forem bem-sucedidos, nós também.</font>
+                                    </font>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
